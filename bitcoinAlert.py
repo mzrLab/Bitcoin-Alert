@@ -1,7 +1,8 @@
 import os
 import requests
-from playsound import playsound
 import time
+from pydub import AudioSegment
+from pydub.playback import play
 
 
 
@@ -15,8 +16,9 @@ if str(ask) == "Y":
 while True:
   if alert_amount > bit:
     print("price is droped below:" + alert_amount + "price is now :"+ bit)
+    song = AudioSegment.from_mp3("alert.mp3")
     time.sleep(180)
-  if alert_amount < bit:
+  if alert_amounthigher < bit:
     print("price is Increased :" + alert_amounthigher + "price is now :"+ bit)
     time.sleep(180)
 def PrintPrice(Bitcoin):
